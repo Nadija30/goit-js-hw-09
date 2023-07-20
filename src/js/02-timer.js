@@ -57,7 +57,7 @@ const timer = {
       if (delta <= 0) {
         this.stop();
         Report.info(
-          '👏 Congratulation! Timer stopped!',
+          ' Congratulation! Timer stopped!',
           'Please, if you want to start timer, choose a date and click on start or reload this page',
           'Okay'
         );
@@ -81,14 +81,6 @@ const timer = {
     startBtn.disabled = true;
     calendar.disabled = false;
   },
-// const namesOfMonth = ['січень', 'лютий','березень','квітень','травень','червень','липень', 'серпень','вересень','жовтень','листопад','грудень']
-// const arrDay = ['неділя', 'понеділок','вівторок','середа','четвер','пятниця','субота']
-// const currentTime = new Date();
-// const currentDay = arrDay[currentTime.getDay()]; // середа 
-// const currentDate = currentTime.getDate(); // число 19 
-// const currentMonth = namesOfMonth[currentTime.getMonth()]; // липень 07 
-// const currentYear = currentTime.getFullYear();// 2023 h
-// console.log(currentDay);
 
 convertMs(ms) {
   // Number of milliseconds per unit of time
