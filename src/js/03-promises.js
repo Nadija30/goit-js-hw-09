@@ -32,7 +32,7 @@ function onSubmit(evt) {
 
   for (let i = 1; i <= inputAmount; i += 1) {
     if (inputDelay < 0 || inputStep < 0 || inputAmount <= 0) {
-      Notify.success(
+      Notify.failure(
         ` please enter values ​​greater than zero!`,
          options
       );
