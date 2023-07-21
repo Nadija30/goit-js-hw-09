@@ -14,16 +14,24 @@ form.addEventListener('click', onSubmit);
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
-    if (shouldResolve) {
-      resolve({ position, delay });
-    } else {
-      reject({ position, delay });
-    }
-  },delay)
+    setTimeout(() => {
+      if (shouldResolve) {
+        resolve({ position, delay });
+      } else {
+        reject({ position, delay });
+      }
+    }, delay);
+  });
 }
 function onSubmit(evt) {
   evt.preventDefault();
   const { delay, step, amount } = evt.currentTarget.elements;
+  if (inputDelay < 0 || inputStep < 0 || inputAmount <= 0) {
+    Notify.success(
+      ` please enter values ​​greater than zero!`,
+      options
+    )
+  };
   let inputDelay = Number(delay.value);
   let inputStep = Number(step.value);
   let inputAmount = Number(amount.value);
