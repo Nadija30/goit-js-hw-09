@@ -26,12 +26,6 @@ function createPromise(position, delay) {
 function onSubmit(evt) {
   evt.preventDefault();
   const { delay, step, amount } = evt.currentTarget.elements;
-  if (inputDelay < 0 || inputStep < 0 || inputAmount <= 0) {
-    Notify.success(
-      ` please enter values ​​greater than zero!`,
-      options
-    )
-  };
   let inputDelay = Number(delay.value);
   let inputStep = Number(step.value);
   let inputAmount = Number(amount.value);
